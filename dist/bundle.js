@@ -21425,7 +21425,7 @@
 	var React = __webpack_require__(1);
 
 	var PokemonList = __webpack_require__(173);
-	var Favorites = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./Favorites.jsx\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var Favorites = __webpack_require__(181);
 
 	var favoritesStore = __webpack_require__(180);
 
@@ -32317,6 +32317,30 @@
 	window.favoritesStore = favoritesStore;
 
 	module.exports = favoritesStore;
+
+/***/ },
+/* 181 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+
+	var favoritesStore = __webpack_require__(180);
+
+	var Favorites = React.createClass({
+	    displayName: 'Favorites',
+
+
+	    render: function () {
+	        return React.createElement(
+	            'div',
+	            null,
+	            this.props.favorites.length
+	        );
+	    }
+
+	});
+
+	module.exports = Favorites;
 
 /***/ }
 /******/ ]);
